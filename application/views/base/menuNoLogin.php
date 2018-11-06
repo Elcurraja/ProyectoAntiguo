@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="menu_li nav-item">
-                        <a class="nav-link" href="#">Principal</a>
+                        <a class="nav-link" href="<?php echo base_url('principal')?>">Principal</a>
                         <div id="divlow1"></div>
                     </li>
                     <li class="menu_li nav-item">
@@ -25,25 +25,12 @@
                         <div id="divlow2"></div>
                     </li>
                     <li class="menu_li nav-item">
-                        <a class="nav-link" href="#">Pedidos</a>
+                        <a class="nav-link" href="<?php echo base_url('login')?>">Login</a>
                         <div id="divlow2"></div>
-                    </li>
-                    <li class="menu_li nav-item">
-                        <a class="nav-link" href="#">Historico Almacen</a>
-                        <div id="divlow2"></div>
-                    </li>
-                    <li class="menu_li nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Administracion
-                        </a>
-                        <div id="divlow4"></div>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Empleados</a>
-                            <a class="dropdown-item" href="#">Proveedores</a>
-                            <a class="dropdown-item" href="#">Clientes</a>
-                        </div>
                     </li>
                 </ul>
             </div>
         </nav>
+    </div>
+    <div class="container-fluid contenedor">
  

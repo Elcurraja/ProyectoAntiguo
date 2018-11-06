@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Principal extends CI_Controller {
+class Login extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,7 +22,7 @@ class Principal extends CI_Controller {
 	{
 		$this->load->helper('url_helper');
 		session_start();
-
+		
     // Comprobamos si hemos enviado el parametro para destruir la sesion
     // Destruimos la sesion y redireccionamos.
     if (isset($_POST['destroy'])&& $_POST['destroy']=="si"){
@@ -31,7 +31,7 @@ class Principal extends CI_Controller {
 
     //Comprobamos si la sesion existe y el atributo para poder logear es correcto
     if(isset($_SESSION['verifi'])&& $_SESSION['verifi']==TRUE){
-        $this->load->view('base/menuLogin');
+        redirect(base_url('principal'));
     }
     else{
         //Comprobamos si los parametros user y admin se han enviado y si son correctos,
@@ -39,7 +39,7 @@ class Principal extends CI_Controller {
         if(isset($_POST['user'])&& isset($_POST['pass'])){
             if($_POST['user']=='admin' && $_POST['pass']=='admin'){
                 $_SESSION['verifi']=TRUE;
-                $this->load->view('base/menuLogin');
+                redirect(base_url('principal'));
             }
             else{
                 $_SESSION['verifi']=FALSE;
@@ -51,7 +51,7 @@ class Principal extends CI_Controller {
             $this->load->view('base/menuNoLogin');
         }
     }
-		
-		$this->load->view('base/footer');
+		$this->load->view('login');
+        $this->load->view('base/footer');
 	}
 }
